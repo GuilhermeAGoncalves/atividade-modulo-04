@@ -1,16 +1,13 @@
-//quando for adicionar na pilha, fazer uma verificação, se ja tiver um elemento na pilha, dar erro e não adicionar, caso contrario adicionar
-
 function createStack(){
     
     let pilha = [];
 
     return{
         add: (n, ...elements) => {
-            if(n > elements.length){
+            if(n != elements.length){
                 console.error("ERRO")
             }
             else{
-                debugger
                 for(let i = 0; i < n; i++){
                     if(pilha.indexOf(elements[i]) === -1){
                         pilha.push(elements[i])
@@ -30,8 +27,7 @@ function createStack(){
                     break;
                 }
                 else{
-                    pilha.pop()
-                    console.log(`${pilha[i]} removido com sucesso`);
+                    console.log(`${pilha.pop()} removido com sucesso`);
                 }
             }
         },
@@ -46,19 +42,8 @@ function createStack(){
 const pilha = new createStack();
 
 pilha.add(4, 1,2,3,4);
-pilha.add(6, 1,2,3,4,5,6);
-pilha.add(4, 1,2,3,4);
-
+pilha.remove(2);
+pilha.add(4, 1,2,3,4)
+pilha.add(10, 1,2,3,4,6,7,8,9,10,11)
 console.log(pilha.print())
-pilha.remove(10)
-
-// for(let i = 0; i < n; i++){
-
-//     for(let j = 0; j < pilha.length; j++){
-        
-//     }
-//     pilha.push(elements[i]);
-//     console.log("Item Adicionado com sucesso");
-// }
-
-
+pilha.remove(10) 
