@@ -36,7 +36,7 @@ class LinkedList{
     quite(){
         let current = this.head;
         let index;
-        let meio = this.size / 2
+        let aHalf = this.size / 2
         
         if(aHalf % 2 === 0){
             index = 0;
