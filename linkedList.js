@@ -33,7 +33,7 @@ class LinkedList{
         this.size++
     }
 
-    quite(){
+    findMiddle(){
         let current = this.head;
         let index;
         let aHalf = this.size / 2
@@ -67,4 +67,4 @@ lista.add(2);
 
 
 
-console.log(lista.quite())
+console.log(lista.findMiddle())
